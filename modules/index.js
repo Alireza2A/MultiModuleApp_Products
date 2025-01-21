@@ -1,8 +1,8 @@
 import { CreateProductCard, RenderProduct } from "./ui.js";
-import { FetchProducts } from "./network.js";
+import { fetchProducts } from "./network.js";
 
 const Main = async () => {
-    const products = await FetchProducts();
+    const products = await fetchProducts();
     products.forEach((product) => {
         const productCard = CreateProductCard(product);
         RenderProduct(productCard);
